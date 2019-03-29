@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="ArtAuction.Views.BidPopup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    VerticalOptions="Start">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO" />
+            <RowDefinition Height="AUTO" />
+        </Grid.RowDefinitions>
+
+        <BoxView
+            x:Name="FirstSection"
+            BackgroundColor="{StaticResource LightBackgroundColor}"
+            HeightRequest="200">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FirstSection_Tapped" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <BoxView
+            Grid.Row="1"
+            BackgroundColor="{StaticResource AccentColor}"
+            HeightRequest="200" />
+    </Grid>
+
+
+
+</ContentView>

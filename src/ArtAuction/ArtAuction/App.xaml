@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="ArtAuction.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+
+        <Color x:Key="BackgroundColor">#1F1E1E</Color>
+        <Color x:Key="LightBackgroundColor">#292828</Color>
+        <Color x:Key="ForegroundTextColor">White</Color>
+        <Color x:Key="SubtitleTextColor">#C5C4C4</Color>
+        <Color x:Key="AccentColor">#FF910A</Color>
+        <Color x:Key="PageFadeColor">#AA000000</Color>
+
+        <Style TargetType="Grid">
+            <Setter Property="RowSpacing" Value="0" />
+            <Setter Property="ColumnSpacing" Value="0" />
+        </Style>
+
+        <Style x:Key="TitleText" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource ForegroundTextColor}" />
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+
+        <Style x:Key="SubtitleText" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource SubtitleTextColor}" />
+            <Setter Property="FontSize" Value="Small" />
+        </Style>
+
+        <Style x:Key="BodyText" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource ForegroundTextColor}" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
+
+        <x:Double x:Key="LinkImageSize">50</x:Double>
+        <x:Double x:Key="LinkImageCornerSize">25</x:Double>
+    </Application.Resources>
+</Application>

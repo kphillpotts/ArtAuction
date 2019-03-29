@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ArtAuction.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:local="clr-namespace:ArtAuction"
+    xmlns:views="clr-namespace:ArtAuction.Views"
+    x:Name="RootPage"
+    BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+                <Image
+                    Aspect="AspectFill"
+                    HeightRequest="300"
+                    Source="StarryNight" />
+                <ContentView Padding="20">
+                    <StackLayout>
+                        <Label Style="{StaticResource TitleText}" Text="Starry Night" />
+                        <Label Style="{StaticResource SubtitleText}" Text="Oil on Canvas - 73 x 92cm - 1889" />
+                        <Label
+                            Margin="0,20,0,0"
+                            Style="{StaticResource BodyText}"
+                            Text="The Starry Night is an oil o canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the... Read More" />
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="AUTO" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="80" />
+                            </Grid.RowDefinitions>
+
+                            <circleImage:CircleImage
+                                Aspect="AspectFill"
+                                HeightRequest="{StaticResource LinkImageSize}"
+                                HorizontalOptions="Center"
+                                Source="Vincent"
+                                VerticalOptions="Center"
+                                WidthRequest="{StaticResource LinkImageSize}" />
+
+                            <StackLayout
+                                Grid.Column="1"
+                                Margin="20,0,0,0"
+                                VerticalOptions="Center">
+                                <Label Style="{StaticResource BodyText}" Text="Vincent van Gogh" />
+                                <Label
+                                    Margin="0,-5,0,0"
+                                    Style="{StaticResource SubtitleText}"
+                                    Text="Dutch, 1853 - 1890" />
+                            </StackLayout>
+
+                            <Label
+                                Grid.Column="2"
+                                HorizontalOptions="End"
+                                Style="{StaticResource SubtitleText}"
+                                Text="&gt;"
+                                VerticalOptions="Center" />
+
+                            <BoxView
+                                Grid.Row="0"
+                                Grid.ColumnSpan="2"
+                                BackgroundColor="{StaticResource LightBackgroundColor}"
+                                HeightRequest="1"
+                                VerticalOptions="End" />
+
+                            <BoxView
+                                Grid.Row="1"
+                                BackgroundColor="Orange"
+                                CornerRadius="{StaticResource LinkImageCornerSize}"
+                                HeightRequest="{StaticResource LinkImageSize}"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                WidthRequest="{StaticResource LinkImageSize}" />
+
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="20,0,0,0"
+                                VerticalOptions="Center">
+                                <Label Style="{StaticResource BodyText}" Text="Wikipedia" />
+                                <Label
+                                    Margin="0,-5,0,0"
+                                    Style="{StaticResource SubtitleText}"
+                                    Text="More info on wikipedia" />
+                            </StackLayout>
+
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                HorizontalOptions="End"
+                                Style="{StaticResource SubtitleText}"
+                                Text="&gt;"
+                                VerticalOptions="Center" />
+
+                        </Grid>
+
+                    </StackLayout>
+                </ContentView>
+            </StackLayout>
+        </ScrollView>
+
+
+        <Grid Grid.Row="1" BackgroundColor="{StaticResource LightBackgroundColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="AUTO" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Padding="20" VerticalOptions="Center">
+                <Label Style="{StaticResource BodyText}" Text="Auction of Art de Paris" />
+                <Label Style="{StaticResource SubtitleText}" Text="Starting bid $4000" />
+            </StackLayout>
+
+            <Button
+                x:Name="BidPopupButton"
+                Grid.Column="1"
+                Margin="20"
+                Padding="10"
+                BackgroundColor="{StaticResource AccentColor}"
+                Clicked="BidPopupButton_Clicked"
+                CornerRadius="15"
+                HeightRequest="30"
+                Text="MAKE A BID"
+                TextColor="{StaticResource ForegroundTextColor}"
+                VerticalOptions="Center" />
+
+        </Grid>
+
+        <BoxView
+            x:Name="PageFader"
+            Grid.Row="0"
+            Grid.RowSpan="1"
+            BackgroundColor="{StaticResource PageFadeColor}"
+            Opacity="0">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PageFader_Tapped" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <views:BidPopup
+            x:Name="BidPopup"
+            Grid.Row="0"
+            Grid.RowSpan="1"
+            TranslationY="{Binding Source={x:Reference RootPage}, Path=Height}" />
+    </Grid>
+
+</ContentPage>
