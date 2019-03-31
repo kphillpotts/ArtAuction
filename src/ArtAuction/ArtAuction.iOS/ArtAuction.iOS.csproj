@@ -156,12 +156,30 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ArtAuction\ArtAuction.csproj">
-      <Project>{F6FB258C-8497-465C-89FC-26BFFD98BB05}</Project>
+      <Project>{1FB47933-1BC0-40B2-AD3A-F719FC83852E}</Project>
       <Name>ArtAuction</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\StarryNight.png" />
+    <BundleResource Include="Resources\redvineyard%403x.jpg" />
+    <BundleResource Include="Resources\redvineyard%402x.jpg" />
+    <BundleResource Include="Resources\redvineyard.jpg" />
+    <BundleResource Include="Resources\cypresses%403x.jpg" />
+    <BundleResource Include="Resources\cypresses%402x.jpg" />
+    <BundleResource Include="Resources\cypresses.jpg" />
+    <BundleResource Include="Resources\willow%403x.jpg" />
+    <BundleResource Include="Resources\willow%402x.jpg" />
+    <BundleResource Include="Resources\willow.jpg" />
+    <BundleResource Include="Resources\cafeterrace%403x.jpeg" />
+    <BundleResource Include="Resources\cafeterrace%402x.jpeg" />
+    <BundleResource Include="Resources\cafeterrace.jpeg" />
+    <BundleResource Include="Resources\fields%403x.jpg" />
+    <BundleResource Include="Resources\fields%402x.jpg" />
+    <BundleResource Include="Resources\fields.jpg" />
+    <BundleResource Include="Resources\peachtree%403x.jpg" />
+    <BundleResource Include="Resources\peachtree%402x.jpg" />
+    <BundleResource Include="Resources\peachtree.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\StarryNight%402x.png" />
@@ -177,5 +195,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Vincent%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>

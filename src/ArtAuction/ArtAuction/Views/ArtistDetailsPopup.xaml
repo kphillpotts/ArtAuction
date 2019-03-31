@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ArtAuction.ViewModels"
+    xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    x:Class="ArtAuction.Views.ArtistDetailsPopup">
+    <ContentView.BindingContext>
+        <vm:ArtistDetailsPopupViewModel />
+    </ContentView.BindingContext>
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="50" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="AUTO" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <BoxView
+                Grid.Row="1"
+                Grid.RowSpan="8"
+                CornerRadius="40,40,0,0"
+                x:Name="FirstSection"
+                BackgroundColor="{StaticResource LightBackgroundColor}"
+                HeightRequest="200">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="FirstSection_Tapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+
+             <circleImage:CircleImage
+                BorderColor="{StaticResource AccentColor}"
+                BorderThickness="2"
+                Source="Vincent.png"
+                Grid.RowSpan="2"
+                HeightRequest="100"
+                WidthRequest="100"
+                VerticalOptions="Start"
+                HorizontalOptions="Center" />
+            
+            <Label
+                Text="Vincent van Gogh"
+                Style="{StaticResource TitleText}"
+                HorizontalTextAlignment="Center"
+                Grid.Row="2" />
+            <Label
+                Text="Dutch, 1853-1890"
+                Style="{StaticResource SubtitleText}"
+                Grid.Row="3"
+                HorizontalTextAlignment="Center" />
+            <Label
+                Style="{StaticResource BodyText}"
+                Grid.Row="4"
+                HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            Text="Was a Dutch Post-Impressioniest painter who is among the most famous and influential... " />
+                        <Span
+                            Text="Read More"
+                            TextColor="{StaticResource AccentColor}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <BoxView
+                Color="Gray"
+                Grid.Row="5"
+                HeightRequest="1" />
+            <Label
+                Grid.Row="6"
+                Text=" " />
+            <BoxView
+                Color="Gray"
+                Grid.Row="8"
+                HeightRequest="1" />
+            <ScrollView
+                Grid.Row="9"
+                BackgroundColor="{StaticResource LightBackgroundColor}"
+                Padding="5">
+                <StackLayout>
+                    <Label
+                        Text="Other Van Gogh Works"
+                        Style="{StaticResource SubtitleText}"
+                        Margin="5" />
+                    <FlexLayout
+                        HeightRequest="930"
+                        HorizontalOptions="Center"
+                        Wrap="Wrap"
+                        BindableLayout.ItemsSource="{Binding ArtWorks}"
+                        Direction="Column">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout
+                                    Padding="5">
+                                    <ImageButton
+                                        CornerRadius="10"
+                                        HeightRequest="{Binding Height}"
+                                        VerticalOptions="Start"
+                                        Aspect="AspectFill"
+                                        Source="{Binding ImagePath}" />
+                                    <Label
+                                        Style="{StaticResource BodyText}"
+                                        Text="{Binding Name}" />
+                                    <Label
+                                        Style="{StaticResource SubtitleText}"
+                                        Text="{Binding Path=Price, StringFormat='{0:C}'}"
+                                        Margin="0,0,0,10" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

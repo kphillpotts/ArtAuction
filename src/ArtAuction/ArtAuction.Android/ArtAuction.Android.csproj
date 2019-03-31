@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -86,6 +85,42 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\redvineyard.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\redvineyard.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\redvineyard.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\redvineyard.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\redvineyard.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\redvineyard.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cypresses.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cypresses.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cypresses.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\cypresses.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\cypresses.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\cypresses.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\willow.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\willow.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\willow.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\willow.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\willow.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\willow.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cafeterrace.jpeg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cafeterrace.jpeg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cafeterrace.jpeg" />
+    <AndroidResource Include="Resources\drawable-hdpi\cafeterrace.jpeg" />
+    <AndroidResource Include="Resources\drawable-mdpi\cafeterrace.jpeg" />
+    <AndroidResource Include="Resources\drawable-ldpi\cafeterrace.jpeg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\fields.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\fields.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fields.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\fields.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\fields.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\fields.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\peachtree.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\peachtree.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\peachtree.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\peachtree.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\peachtree.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\peachtree.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Vincent.png" />
@@ -93,6 +128,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ArtAuction\ArtAuction.csproj">
       <Project>{F6FB258C-8497-465C-89FC-26BFFD98BB05}</Project>
+      <Project>{1FB47933-1BC0-40B2-AD3A-F719FC83852E}</Project>
       <Name>ArtAuction</Name>
     </ProjectReference>
   </ItemGroup>
@@ -122,6 +158,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Vincent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-ldpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
