@@ -20,6 +20,7 @@ namespace ArtAuction
         {
             base.OnAppearing();
             BidPopup.OnExpandTapped += ExpandPopup;
+            ArtistDetailsPopup.OnExpandTapped += ExpandArtistDetails;
 
         }
 
@@ -29,10 +30,16 @@ namespace ArtAuction
             BidPopup.TranslateTo(0, BidPopup.Height, AnimationSpeed, Easing.SinInOut);
         }
 
+        private void ExpandArtistDetails()
+        {
+            ArtistDetailsPopup.TranslateTo(0, 80, AnimationSpeed, Easing.SinInOut);
+        }
+
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
             BidPopup.OnExpandTapped -= ExpandPopup;
+            ArtistDetailsPopup.OnExpandTapped -= ExpandArtistDetails;
         }
 
 
@@ -48,6 +55,15 @@ namespace ArtAuction
         {
             PageFader.FadeTo(0, AnimationSpeed, Easing.SinInOut);
             BidPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
+            ArtistDetailsPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
+        }
+
+        private void Artist_Tapped(object sender, EventArgs e)
+        {
+            var pageHeight = Height;
+            var firstSection = ArtistDetailsPopup.FirstSectionHeight;
+            PageFader.FadeTo(1, AnimationSpeed, Easing.SinInOut);
+            ArtistDetailsPopup.TranslateTo(0, pageHeight - firstSection, AnimationSpeed, Easing.SinInOut);
         }
     }
 }
