@@ -10,7 +10,20 @@
         <Color x:Key="ForegroundTextColor">White</Color>
         <Color x:Key="SubtitleTextColor">#C5C4C4</Color>
         <Color x:Key="AccentColor">#FF910A</Color>
+        <Color x:Key="LightAccentColor">#FFC57E</Color>
         <Color x:Key="PageFadeColor">#AA000000</Color>
+
+        <OnPlatform x:Key="TitleFontFamily" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Old Standard TT" />
+            <On Platform="Android" Value="OldStandard-Bold.ttf#Old Standard TT" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="BodyFontFamily" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Questrial" />
+            <On Platform="Android" Value="Questrial.ttf#Questrial" />
+        </OnPlatform>
+
+
 
         <Style TargetType="Grid">
             <Setter Property="RowSpacing" Value="0" />
@@ -19,16 +32,19 @@
 
         <Style x:Key="TitleText" TargetType="Label">
             <Setter Property="TextColor" Value="{StaticResource ForegroundTextColor}" />
+            <Setter Property="FontFamily" Value="{StaticResource TitleFontFamily}" />
             <Setter Property="FontSize" Value="30" />
         </Style>
 
         <Style x:Key="SubtitleText" TargetType="Label">
             <Setter Property="TextColor" Value="{StaticResource SubtitleTextColor}" />
+            <Setter Property="FontFamily" Value="{StaticResource BodyFontFamily}" />
             <Setter Property="FontSize" Value="Small" />
         </Style>
 
         <Style x:Key="BodyText" TargetType="Label">
             <Setter Property="TextColor" Value="{StaticResource ForegroundTextColor}" />
+            <Setter Property="FontFamily" Value="{StaticResource BodyFontFamily}" />
             <Setter Property="FontSize" Value="Medium" />
         </Style>
 

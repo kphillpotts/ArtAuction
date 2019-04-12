@@ -34,5 +34,10 @@
     <string>ArtAuction</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+    <key>UIAppFonts</key>
+    <array>
+      <string>OldStandard-Bold.ttf</string>
+      <string>Questrial-Regular.ttf</string>
+    </array>
 </dict>
 </plist>

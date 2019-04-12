@@ -8,23 +8,207 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="AUTO" />
-            <RowDefinition Height="AUTO" />
+            <RowDefinition Height="300" />
         </Grid.RowDefinitions>
+
 
         <BoxView
             x:Name="FirstSection"
             BackgroundColor="{StaticResource LightBackgroundColor}"
+            CornerRadius="20,20,0,0"
             HeightRequest="200">
             <BoxView.GestureRecognizers>
                 <TapGestureRecognizer Tapped="FirstSection_Tapped" />
             </BoxView.GestureRecognizers>
         </BoxView>
+
+        <StackLayout
+            Grid.Row="0"
+            Margin="30"
+            InputTransparent="True">
+            <Label Style="{StaticResource TitleText}" Text="Auction of Pure Art" />
+            <Label Style="{StaticResource SubtitleText}" Text="21 Mar, 2019 - 10:30am" />
+            <BoxView
+                Margin="-30,0,-30,0"
+                BackgroundColor="{StaticResource SubtitleTextColor}"
+                HeightRequest="1" />
+
+            <StackLayout
+                Margin="0,10"
+                Orientation="Horizontal"
+                Spacing="15">
+                <Label
+                    Style="{StaticResource BodyText}"
+                    Text="Estimated cost"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Style="{StaticResource BodyText}"
+                    Text="Starting Bid"
+                    VerticalOptions="Center" />
+
+            </StackLayout>
+
+            <Grid ColumnSpacing="10" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="BCIcon" VerticalOptions="Center" />
+                <Label
+                    Grid.Column="1"
+                    Style="{StaticResource BodyText}"
+                    Text="BTC"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Column="2"
+                    HorizontalTextAlignment="End"
+                    Style="{StaticResource BodyText}"
+                    Text="1,2570 - 5,8914"
+                    VerticalOptions="Center" />
+
+                <Image
+                    Grid.Row="1"
+                    Source="ETHIcon"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Style="{StaticResource BodyText}"
+                    Text="ETH"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    HorizontalTextAlignment="End"
+                    Style="{StaticResource BodyText}"
+                    Text="36,64 - 171.62"
+                    VerticalOptions="Center" />
+
+
+                <Image
+                    Grid.Row="2"
+                    Source="USDIcon"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Style="{StaticResource BodyText}"
+                    Text="USD"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    HorizontalTextAlignment="End"
+                    Style="{StaticResource BodyText}"
+                    Text="4,000 - 20,000"
+                    VerticalOptions="Center" />
+            </Grid>
+
+        </StackLayout>
+
+
+
         <BoxView
             Grid.Row="1"
             BackgroundColor="{StaticResource AccentColor}"
+            CornerRadius="10,10,0,0"
             HeightRequest="200" />
+
+        <StackLayout Grid.Row="1" Margin="20">
+            <Label
+                FontAttributes="Bold"
+                Style="{StaticResource BodyText}"
+                Text="Select bid currency" />
+
+            <Grid ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource LightAccentColor}"
+                    CornerRadius="5" />
+                <BoxView
+                    Grid.Column="1"
+                    BackgroundColor="{StaticResource LightAccentColor}"
+                    CornerRadius="5" />
+                <BoxView
+                    Grid.Column="2"
+                    BackgroundColor="{StaticResource LightAccentColor}"
+                    CornerRadius="5" />
+
+                <StackLayout Margin="10">
+                    <Image
+                        HorizontalOptions="Start"
+                        Source="USDIcon"
+                        VerticalOptions="Start" />
+                    <Label
+                        Style="{StaticResource SubtitleText}"
+                        Text="Dollar"
+                        TextColor="{StaticResource ForegroundTextColor}" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Margin="10">
+                    <Image
+                        HorizontalOptions="Start"
+                        Source="BCIcon"
+                        VerticalOptions="Start" />
+                    <Label
+                        Style="{StaticResource SubtitleText}"
+                        Text="Bitcoin"
+                        TextColor="{StaticResource ForegroundTextColor}" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Margin="10">
+                    <Image
+                        HorizontalOptions="Start"
+                        Source="ETHIcon"
+                        VerticalOptions="Start" />
+                    <Label
+                        Style="{StaticResource SubtitleText}"
+                        Text="Bitcoin"
+                        TextColor="{StaticResource ForegroundTextColor}" />
+                </StackLayout>
+
+            </Grid>
+
+            <StackLayout
+                Margin="0,20,0,0"
+                Orientation="Horizontal"
+                Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    Style="{StaticResource BodyText}"
+                    Text="Maximum Bid" />
+
+                <Image Source="QuestionIcon" />
+            </StackLayout>
+            <Label Style="{StaticResource BodyText}" Text="$45,000" />
+            <BoxView
+                Margin="0,10,0,20"
+                BackgroundColor="{StaticResource ForegroundTextColor}"
+                HeightRequest="1" />
+
+            <Button
+                BackgroundColor="White"
+                CornerRadius="20"
+                FontAttributes="Bold"
+                Text="Make a Bid"
+                TextColor="{StaticResource AccentColor}" />
+        </StackLayout>
     </Grid>
-
-
-
 </ContentView>

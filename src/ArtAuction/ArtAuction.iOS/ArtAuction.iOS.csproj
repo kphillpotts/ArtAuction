@@ -95,6 +95,8 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\OldStandard-Bold.ttf" />
+    <BundleResource Include="Resources\Questrial-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -197,6 +199,39 @@
     <BundleResource Include="Resources\Vincent%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <BundleResource Include="Resources\USDIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\USDIcon%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\USDIcon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BCIcon%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BCIcon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BCIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ETHIcon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ETHIcon%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ETHIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\QuestionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\QuestionIcon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\QuestionIcon%403x.png" />
   </ItemGroup>
 </Project>

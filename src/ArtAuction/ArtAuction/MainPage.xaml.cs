@@ -27,7 +27,9 @@ namespace ArtAuction
 
         private void ExpandPopup()
         {
-            BidPopup.TranslateTo(0, BidPopup.Height, AnimationSpeed, Easing.SinInOut);
+            var height = BidPopup.Height;
+
+            BidPopup.TranslateTo(0, this.Height - height, AnimationSpeed, Easing.SinInOut);
         }
 
         private void ExpandArtistDetails()

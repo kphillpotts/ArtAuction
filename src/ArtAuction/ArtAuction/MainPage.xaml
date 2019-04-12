@@ -23,7 +23,7 @@
                     Source="StarryNight" />
                 <ContentView Padding="20">
                     <StackLayout>
-                        <Label Style="{StaticResource TitleText}" Text="Starry Night" />
+                        <Label Style="{StaticResource TitleText}" Text="The Starry Night" />
                         <Label Style="{StaticResource SubtitleText}" Text="Oil on Canvas - 73 x 92cm - 1889" />
                         <Label
                             Margin="0,20,0,0"
@@ -47,9 +47,9 @@
                                 HorizontalOptions="Center"
                                 Source="Vincent"
                                 VerticalOptions="Center"
-                                WidthRequest="{StaticResource LinkImageSize}" >
+                                WidthRequest="{StaticResource LinkImageSize}">
                                 <circleImage:CircleImage.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Artist_Tapped"/>
+                                    <TapGestureRecognizer Tapped="Artist_Tapped" />
                                 </circleImage:CircleImage.GestureRecognizers>
                             </circleImage:CircleImage>
 
@@ -63,7 +63,7 @@
                                     Style="{StaticResource SubtitleText}"
                                     Text="Dutch, 1853 - 1890" />
                                 <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Artist_Tapped"/>
+                                    <TapGestureRecognizer Tapped="Artist_Tapped" />
                                 </StackLayout.GestureRecognizers>
                             </StackLayout>
 
@@ -160,7 +160,7 @@
             Grid.Row="0"
             Grid.RowSpan="1"
             TranslationY="{Binding Source={x:Reference RootPage}, Path=Height}" />
-         <views:ArtistDetailsPopup
+        <views:ArtistDetailsPopup
             x:Name="ArtistDetailsPopup"
             Grid.Row="0"
             Grid.RowSpan="1"
