@@ -6,6 +6,7 @@
     xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
     xmlns:local="clr-namespace:ArtAuction"
     xmlns:views="clr-namespace:ArtAuction.Views"
+    xmlns:customcontrol="clr-namespace:ArtAuction.CustomControl"
     x:Name="RootPage"
     BackgroundColor="{StaticResource BackgroundColor}">
 
@@ -25,10 +26,11 @@
                     <StackLayout>
                         <Label Style="{StaticResource TitleText}" Text="The Starry Night" />
                         <Label Style="{StaticResource SubtitleText}" Text="Oil on Canvas - 73 x 92cm - 1889" />
-                        <Label
+                        <customcontrol:LabelLenght
                             Margin="0,20,0,0"
-                            Style="{StaticResource BodyText}"
-                            Text="The Starry Night is an oil o canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the... Read More" />
+                            MaxLenght="144"
+                            ReadMore="Orange"
+                            Text="The Starry Night is an oil o canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the text" />
 
                         <Grid>
                             <Grid.ColumnDefinitions>
