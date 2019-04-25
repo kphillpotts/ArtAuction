@@ -20,7 +20,7 @@
 
         <OnPlatform x:Key="BodyFontFamily" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Questrial" />
-            <On Platform="Android" Value="Questrial.ttf#Questrial" />
+            <On Platform="Android" Value="Questrial-Regular.ttf#Questrial" />
         </OnPlatform>
 
 
