@@ -49,21 +49,24 @@ namespace ArtAuction
         {
             var pageHeight = Height;
             var firstSection = BidPopup.FirstSectionHeight;
+            PageFader.IsVisible = true;
             PageFader.FadeTo(1, AnimationSpeed, Easing.SinInOut);
             BidPopup.TranslateTo(0, pageHeight-firstSection, AnimationSpeed, Easing.SinInOut);
         }
 
-        private void PageFader_Tapped(object sender, EventArgs e)
+        private async void PageFader_Tapped(object sender, EventArgs e)
         {
-            PageFader.FadeTo(0, AnimationSpeed, Easing.SinInOut);
             BidPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
             ArtistDetailsPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
+            await PageFader.FadeTo(0, AnimationSpeed, Easing.SinInOut);
+            PageFader.IsVisible = false;
         }
 
         private void Artist_Tapped(object sender, EventArgs e)
         {
             var pageHeight = Height;
             var firstSection = ArtistDetailsPopup.FirstSectionHeight;
+            PageFader.IsVisible = true;
             PageFader.FadeTo(1, AnimationSpeed, Easing.SinInOut);
             ArtistDetailsPopup.TranslateTo(0, pageHeight - firstSection, AnimationSpeed, Easing.SinInOut);
         }

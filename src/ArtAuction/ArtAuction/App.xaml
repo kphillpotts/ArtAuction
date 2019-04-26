@@ -12,6 +12,11 @@
         <Color x:Key="AccentColor">#FF910A</Color>
         <Color x:Key="LightAccentColor">#FFC57E</Color>
         <Color x:Key="PageFadeColor">#AA000000</Color>
+        <Color x:Key="HighlightGradientStart">#ffca8a</Color>
+        <Color x:Key="HighlightGradientEnd">#ffba67</Color>
+        <Color x:Key="NonHighlightGradientStart">#ffad4a</Color>
+        <Color x:Key="NonHighlightGradientEnd">#ff9d24</Color>
+
 
         <OnPlatform x:Key="TitleFontFamily" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Old Standard TT" />

@@ -4,9 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:customcontrol="clr-namespace:ArtAuction.CustomControl"
     xmlns:local="clr-namespace:ArtAuction"
     xmlns:views="clr-namespace:ArtAuction.Views"
-    xmlns:customcontrol="clr-namespace:ArtAuction.CustomControl"
     x:Name="RootPage"
     BackgroundColor="{StaticResource BackgroundColor}">
 
@@ -69,12 +69,8 @@
                                 </StackLayout.GestureRecognizers>
                             </StackLayout>
 
-                            <Label
-                                Grid.Column="2"
-                                HorizontalOptions="End"
-                                Style="{StaticResource SubtitleText}"
-                                Text="&gt;"
-                                VerticalOptions="Center" />
+                            <Image Grid.Column="2" Source="Chevron" />
+
 
                             <BoxView
                                 Grid.Row="0"
@@ -85,12 +81,20 @@
 
                             <BoxView
                                 Grid.Row="1"
-                                BackgroundColor="Orange"
+                                BackgroundColor="Black"
                                 CornerRadius="{StaticResource LinkImageCornerSize}"
                                 HeightRequest="{StaticResource LinkImageSize}"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 WidthRequest="{StaticResource LinkImageSize}" />
+
+                            <Image
+                                Grid.Row="1"
+                                HeightRequest="30"
+                                HorizontalOptions="Center"
+                                Source="wikipedia_icon"
+                                VerticalOptions="Center"
+                                WidthRequest="30" />
 
                             <StackLayout
                                 Grid.Row="1"
@@ -104,13 +108,11 @@
                                     Text="More info on wikipedia" />
                             </StackLayout>
 
-                            <Label
+                            <Image
                                 Grid.Row="1"
                                 Grid.Column="2"
-                                HorizontalOptions="End"
-                                Style="{StaticResource SubtitleText}"
-                                Text="&gt;"
-                                VerticalOptions="Center" />
+                                Source="Chevron" />
+
 
                         </Grid>
 
@@ -138,8 +140,8 @@
                 Padding="10"
                 BackgroundColor="{StaticResource AccentColor}"
                 Clicked="BidPopupButton_Clicked"
-                CornerRadius="15"
-                HeightRequest="30"
+                CornerRadius="20"
+                HeightRequest="40"
                 Text="MAKE A BID"
                 TextColor="{StaticResource ForegroundTextColor}"
                 VerticalOptions="Center" />
@@ -151,6 +153,7 @@
             Grid.Row="0"
             Grid.RowSpan="1"
             BackgroundColor="{StaticResource PageFadeColor}"
+            IsVisible="false"
             Opacity="0">
             <BoxView.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PageFader_Tapped" />
