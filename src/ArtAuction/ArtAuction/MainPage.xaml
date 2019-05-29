@@ -26,9 +26,9 @@
                     <StackLayout>
                         <Label Style="{StaticResource TitleText}" Text="The Starry Night" />
                         <Label Style="{StaticResource SubtitleText}" Text="Oil on Canvas - 73 x 92cm - 1889" />
-                        <customcontrol:LabelLenght
+                        <customcontrol:LabelLength
                             Margin="0,20,0,0"
-                            MaxLenght="144"
+                            MaxLength="144"
                             ReadMore="Orange"
                             Text="The Starry Night is an oil o canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the text" />
 

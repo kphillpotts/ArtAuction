@@ -3,27 +3,27 @@ using Xamarin.Forms;
 
 namespace ArtAuction.CustomControl
 {
-    public partial class LabelLenght : ContentView
+    public partial class LabelLength : ContentView
     {
-        public LabelLenght() => InitializeComponent();
+        public LabelLength() => InitializeComponent();
 
         public static readonly BindableProperty TextProperty =
             BindableProperty.Create(nameof(Text),
                         typeof(string),
-                        typeof(LabelLenght),
+                        typeof(LabelLength),
                         default(string),
                         BindingMode.OneWay,
                         propertyChanged: OnTextChanged);
 
         static void OnTextChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            var view = (LabelLenght)bindable;
+            var view = (LabelLength)bindable;
 
             var myText = view.Text;
 
-            if (myText.Length >= view.MaxLenght)
+            if (myText.Length >= view.MaxLength)
             {
-                var text = $"{myText.Substring(0, view.MaxLenght)}...";
+                var text = $"{myText.Substring(0, view.MaxLength)}...";
                 view.lbl.FormattedText = new FormattedString();
                 view.lbl.FormattedText.Spans.Add(new Span
                 {
@@ -42,20 +42,20 @@ namespace ArtAuction.CustomControl
         public string Text { get => (string)GetValue(TextProperty); set => SetValue(TextProperty, value); }
 
 
-        public static readonly BindableProperty MaxLenghtProperty =
-            BindableProperty.Create(nameof(MaxLenght),
+        public static readonly BindableProperty MaxLengthProperty =
+            BindableProperty.Create(nameof(MaxLength),
                         typeof(int),
-                        typeof(LabelLenght),
+                        typeof(LabelLength),
                         default(int),
                         BindingMode.OneWay);
 
-        public int MaxLenght { get => (int)GetValue(MaxLenghtProperty); set => SetValue(MaxLenghtProperty, value); }
+        public int MaxLength { get => (int)GetValue(MaxLengthProperty); set => SetValue(MaxLengthProperty, value); }
 
 
         public static readonly BindableProperty ReadMoreProperty = 
             BindableProperty.Create(nameof(ReadMore),
                         typeof(Color),
-                        typeof(LabelLenght),
+                        typeof(LabelLength),
                         default(Color),
                         BindingMode.OneWay);
 

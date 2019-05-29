@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="CustomControl\LabelLenght.xaml">
+    <EmbeddedResource Update="CustomControl\LabelLength.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\BidPopup.xaml">
@@ -27,5 +27,10 @@
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="CustomControl\LabelLength.xaml.cs">
+      <DependentUpon>LabelLength.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
