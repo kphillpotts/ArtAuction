@@ -3,7 +3,7 @@
 This UI Challenge is based on the fantastic dribble designs by [Alex Pesenka](https://dribbble.com/alex_pesenka).  
 
 ## Dribbble Design
-[![Dribbble Design](https://dribbble.com/shots/6177235-Valuable-Auction-Product-Page/attachments/1324431)](https://dribbble.com/shots/6177235-Valuable-Auction-Product-Page)
+[![Dribbble Design](https://cdn.dribbble.com/users/918572/screenshots/6177235/attachments/1324431/shot_2.png)](https://dribbble.com/shots/6177235-Valuable-Auction-Product-Page)
 
 ## Blog Post
 I have written a [blog post on the implementation](https://kymphillpotts.com/xamarin-forms-ui-challenge-artauction.html) of the design over at [my blog](https://kymphillpotts.com)
